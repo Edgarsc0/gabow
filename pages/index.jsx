@@ -1,7 +1,8 @@
 import React from 'react'
 import Script from 'next/script'
 import Link from 'next/link'
-import styles from '../styles/index.module.scss'
+// import styles from '../styles/index.module.scss'
+import styles from '../styles/Index.module.scss'
 
 const index = () => {
     return (

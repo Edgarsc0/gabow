@@ -55,7 +55,7 @@ const Mapa = () => {
                                 {item.label} <br />
                                 {item.desc} <br/>
                                 {item.direccion}<br/>
-                                <Link href={"/Edificio/"+item.label}><button type='button' className={styles.button}>Ir a</button></Link>
+                                <Link href={"cls/"+item.label}><button type='button' className={styles.button}>Ir a</button></Link>
                             </Popup>
                         </Marker>
                     ))}
