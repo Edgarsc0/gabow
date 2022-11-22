@@ -2,12 +2,13 @@ import React from 'react'
 import Head from 'next/head'
 import Link from 'next/link'
 import styles from '../styles/Favoritos.module.scss'
+import Script from 'next/script'
 
 const Favoritos = () => {
     return (
         <>
             <Head>
-                <script src="https://cdn.lordicon.com/pzdvqjsp.js"></script>
+                <Script src="https://cdn.lordicon.com/pzdvqjsp.js"></Script>
             </Head>
             <div className={styles.container}>
                 <table className={styles.tabla}>
