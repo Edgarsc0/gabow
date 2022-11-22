@@ -7,9 +7,9 @@ import Script from 'next/script'
 const Favoritos = () => {
     return (
         <>
-            <Head>
-                <Script src="https://cdn.lordicon.com/pzdvqjsp.js"></Script>
-            </Head>
+            {/* <Head>
+            </Head> */}
+            <Script src="https://cdn.lordicon.com/pzdvqjsp.js"></Script>
             <div className={styles.container}>
                 <table className={styles.tabla}>
                     <tbody>
