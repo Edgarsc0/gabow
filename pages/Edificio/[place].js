@@ -18,7 +18,6 @@ import MapGeneral from "../../public/townCenter/map_general.svg";
 import TownPb from "../../public/townCenter/town_pb.svg";
 import TownPiso1 from "../../public/townCenter/town_piso1.svg";
 import TownPiso2 from "../../public/townCenter/town_piso2.svg";
-const Flechas = dynamic(() => import("../../components/Flechas"), { ssr: false })
 
 const Edificio = () => {
     const router=useRouter();
