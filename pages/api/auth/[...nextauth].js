@@ -12,7 +12,8 @@ export const authOptions={
             clientId:"1326182381287404",
             clientSecret:"b8f2ce86c4de02259e0b6d9c9fa34c41"
         })
-    ]
+    ],
+    secret:"IoBIG5YFnH"
 }
 
 export default NextAuth(authOptions);
