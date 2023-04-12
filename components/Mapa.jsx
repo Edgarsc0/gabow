@@ -5,7 +5,7 @@ import { MapContainer, TileLayer, Marker, Popup, ZoomControl } from 'react-leafl
 import { Icon } from 'leaflet'
 import styles from '../styles/Mapa.module.scss'
 import Select from 'react-select'
-
+import { useSession } from 'next-auth/react';
 import Ley from './Ley'
 
 // Esta data se saca de la BD
@@ -35,7 +35,8 @@ function icono(type) {
 }
 
 const Mapa = () => {
-    
+    const {data:session,status}=useSession();
+    console.log(session);
     const mapRef = useRef();
     const markerRef = useRef();
     
