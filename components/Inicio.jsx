@@ -7,6 +7,7 @@ import Profile from "./Profile"
 import { Visibility, VisibilityOff } from '@mui/icons-material';
 import { useSession } from "next-auth/react";
 import FolderList from "./FolderList"
+import UserProfileList from "./UserProfileList"
 
 const Inicio = () => {
     const { data: session, status } = useSession();
@@ -28,6 +29,7 @@ const Inicio = () => {
             </Snackbar>
             <Modal open={open} onClose={() => setOpen(false)}>
                 <Box className={styles.mo}>
+                    <UserProfileList/>
                     <FolderList/>
                 </Box>
             </Modal>
