@@ -4,6 +4,7 @@ import { styled } from '@mui/material/styles';
 import Badge from '@mui/material/Badge';
 import Avatar from '@mui/material/Avatar';
 import Stack from '@mui/material/Stack';
+import styles from "../styles/Inicio.module.scss";
 
 const StyledBadge = styled(Badge)(({ theme }) => ({
   '& .MuiBadge-badge': {
@@ -42,17 +43,17 @@ const SmallAvatar = styled(Avatar)(({ theme }) => ({
 
 export default function BadgeAvatars() {
   return (
-    <Stack direction="row" spacing={2}>
+    <Stack direction="row" spacing={2} anchorOrigin={{ horizontal: 'right', vertical: 'top' }} sclassName={styles.container}>
       <StyledBadge
         overlap="circular"
-        anchorOrigin={{ vertical: 'top', horizontal: 'right' }}
+        anchorOrigin={{ vertical: 'bottom', horizontal: 'right' }}
         variant="dot"
       >
         <Avatar alt="Remy Sharp" src="https://lh3.googleusercontent.com/a/AGNmyxZ5xyxeevdVMa4yKFXnQyH6uNg3Yh8deGfTaSZkrw=s96-c" />
       </StyledBadge>
       <Badge
         overlap="circular"
-        anchorOrigin={{ vertical: 'top', horizontal: 'right' }}
+        anchorOrigin={{ vertical: 'bottom', horizontal: 'right' }}
         badgeContent={
           <SmallAvatar alt="Remy Sharp" src="https://lh3.googleusercontent.com/a/AGNmyxZ5xyxeevdVMa4yKFXnQyH6uNg3Yh8deGfTaSZkrw=s96-c" />
         }
