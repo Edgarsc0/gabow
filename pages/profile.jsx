@@ -45,14 +45,14 @@ export default function BadgeAvatars() {
     <Stack direction="row" spacing={2}>
       <StyledBadge
         overlap="circular"
-        anchorOrigin={{ vertical: 'bottom', horizontal: 'right' }}
+        anchorOrigin={{ vertical: 'top', horizontal: 'right' }}
         variant="dot"
       >
         <Avatar alt="Remy Sharp" src="https://lh3.googleusercontent.com/a/AGNmyxZ5xyxeevdVMa4yKFXnQyH6uNg3Yh8deGfTaSZkrw=s96-c" />
       </StyledBadge>
       <Badge
         overlap="circular"
-        anchorOrigin={{ vertical: 'bottom', horizontal: 'right' }}
+        anchorOrigin={{ vertical: 'top', horizontal: 'right' }}
         badgeContent={
           <SmallAvatar alt="Remy Sharp" src="https://lh3.googleusercontent.com/a/AGNmyxZ5xyxeevdVMa4yKFXnQyH6uNg3Yh8deGfTaSZkrw=s96-c" />
         }
