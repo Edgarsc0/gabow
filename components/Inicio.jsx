@@ -16,7 +16,7 @@ const Inicio = () => {
     return (
         <>
             <Snackbar open anchorOrigin={{ horizontal: 'right', vertical: 'top' }} className={styles.container}>
-                {status == "unauthenticated" ? (
+                {status == "unauthenticated" || status=="loading" ? (
                     <IconButton onClick={() => signIn()}>
                         <AccountCircleIcon className={styles.icon} />
                     </IconButton>
