@@ -43,7 +43,7 @@ const SmallAvatar = styled(Avatar)(({ theme }) => ({
 
 export default function BadgeAvatars() {
   return (
-    <Stack direction="row" spacing={2} anchorOrigin={{ horizontal: 'right', vertical: 'top' }} sclassName={styles.container}>
+    <Stack direction="row" spacing={2} anchorOrigin={{ horizontal: 'right', vertical: 'top' }} className={styles.container}>
       <StyledBadge
         overlap="circular"
         anchorOrigin={{ vertical: 'bottom', horizontal: 'right' }}
