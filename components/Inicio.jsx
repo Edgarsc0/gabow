@@ -18,7 +18,7 @@ const Inicio = () => {
                     <AccountCircleIcon className={styles.icon} />
                 </IconButton>
             </Snackbar>
-            <Modal open={open} onClose={() => setOpen(false)}>
+            <Modal open={open} onClose={() => setOpen(false)} onOpen={()=>console.log("hola")}>
                 <Box className={styles.mo}>
                     hola
                 </Box>
