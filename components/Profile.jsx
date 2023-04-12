@@ -5,7 +5,7 @@ import Badge from '@mui/material/Badge';
 import Avatar from '@mui/material/Avatar';
 import Stack from '@mui/material/Stack';
 import styles from "../styles/Inicio.module.scss";
-
+import { useSession } from "next-auth/react";
 const StyledBadge = styled(Badge)(({ theme }) => ({
   '& .MuiBadge-badge': {
     backgroundColor: '#44b700',
@@ -37,6 +37,8 @@ const StyledBadge = styled(Badge)(({ theme }) => ({
 
 
 export default function BadgeAvatars() {
+    const { data: session, status } = useSession();
+    console.log(session);
   return (
     <Stack direction="row" spacing={2} style={{
       position:"absolute",
@@ -49,7 +51,7 @@ export default function BadgeAvatars() {
         anchorOrigin={{ vertical: 'bottom', horizontal: 'right' }}
         variant="dot"
       >
-        <Avatar alt="Remy Sharp" src="https://lh3.googleusercontent.com/a/AGNmyxZ5xyxeevdVMa4yKFXnQyH6uNg3Yh8deGfTaSZkrw=s96-c" />
+        <Avatar alt="Remy Sharp" src={session.user.image} />
       </StyledBadge>
 
     </Stack>

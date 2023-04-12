@@ -16,7 +16,7 @@ const Ley = (props) => {
 
             <>
                 <Inicio/>
-
+                
                 <Snackbar className={styles.container} open anchorOrigin={{ horizontal: 'right', vertical: 'bottom' }}>
                     <IconButton onClick={() => setOpen(true)}>
                         <HelpOutlineIcon className={styles.prueba} />
