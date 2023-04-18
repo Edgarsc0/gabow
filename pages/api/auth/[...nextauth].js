@@ -10,8 +10,8 @@ export const authOptions={
             clientSecret:"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"
         }),
         FacebookProvider({
-            clientId:"1326182381287404",
-            clientSecret:"b8f2ce86c4de02259e0b6d9c9fa34c41"
+            clientId:"160210610311900",
+            clientSecret:"b82766122e460b27f54c79922036dcc7"
         }),
         DiscordProvider({
             clientId:"1095935573111353368",
