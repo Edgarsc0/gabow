@@ -7,7 +7,7 @@ import styles from '../styles/Mapa.module.scss'
 import Select from 'react-select'
 import { useSession } from 'next-auth/react';
 import Ley from './Ley'
-import Info from './info'
+import Info from './Info'
 
 // Esta data se saca de la BD
 const data = [
