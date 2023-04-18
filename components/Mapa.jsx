@@ -7,6 +7,7 @@ import styles from '../styles/Mapa.module.scss'
 import Select from 'react-select'
 import { useSession } from 'next-auth/react';
 import Ley from './Ley'
+import Info from './info'
 
 // Esta data se saca de la BD
 const data = [
@@ -35,6 +36,9 @@ function icono(type) {
 }
 
 const Mapa = () => {
+
+    const [openInfo, setOpenInfo] = useState(false);
+
     const {data:session,status}=useSession();
     console.log(session);
     const mapRef = useRef();
@@ -54,6 +58,10 @@ const Mapa = () => {
         mapa.flyTo(item.latlng,18,{
             duration:2
         });
+    }
+
+    const closeInfo = () => {
+        setOpenInfo(false);
     }
 
     return (
@@ -86,6 +94,7 @@ const Mapa = () => {
                 </MapContainer>
             </div>
             <Ley content={{tipo: "gen"}}/>
+            <Info openInfo={openInfo} closeInfo={closeInfo}/>
         </>
     )
 }
