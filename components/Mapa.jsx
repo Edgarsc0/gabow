@@ -49,10 +49,9 @@ const Mapa = () => {
             });
             console.log(data);
         }
-        console.log(status);
-        if(session){
-            registerUser();
-        }
+
+        registerUser();
+
 
     },[])
 
