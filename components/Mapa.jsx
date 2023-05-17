@@ -49,10 +49,7 @@ const Mapa = () => {
             });
             console.log(data);
         }
-
         registerUser();
-
-
     },[])
 
 
