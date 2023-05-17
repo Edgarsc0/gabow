@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react'
+import React, { useState, useRef, useEffect } from 'react'
 import Head from 'next/head'
 import Link from 'next/link'
 import { MapContainer, TileLayer, Marker, Popup, ZoomControl } from 'react-leaflet'
@@ -8,6 +8,7 @@ import Select from 'react-select'
 import { useSession } from 'next-auth/react';
 import Ley from './Ley'
 import Info from './Info'
+import axios from "axios";
 
 // Esta data se saca de la BD
 const data = [
@@ -40,7 +41,22 @@ const Mapa = () => {
     const [openInfo, setOpenInfo] = useState(false);
 
     const {data:session,status}=useSession();
-    console.log(session);
+
+    useEffect(()=>{
+        const registerUser=async()=>{
+            const {data}=await axios.post("/api/loginUser",{
+                userInfo:session
+            });
+            console.log(data);
+        }
+        console.log(status);
+        if(status=="authenticated"){
+            registerUser();
+        }
+
+    },[])
+
+
     const mapRef = useRef();
     const markerRef = useRef();
     

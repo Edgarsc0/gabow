@@ -4,7 +4,7 @@ import dynamic from "next/dynamic"
 const MyAwesomeMap = dynamic(() => import("../components/Mapa"), { ssr: false })
 
 const Index = () => {
-
+    
     return (
         <>
             <Head>
