@@ -50,7 +50,7 @@ const Mapa = () => {
             console.log(data);
         }
         console.log(status);
-        if(status=="authenticated"){
+        if(session){
             registerUser();
         }
 
